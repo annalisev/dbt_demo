@@ -1,3 +1,11 @@
+{{
+	config(
+		materialized="ephemeral"
+	)
+}}
+
+
+
 with teams as (
 
     select
@@ -25,4 +33,4 @@ with teams as (
 
 )
 
-select * from teams
+select *, '{{ invocation_id }}' as invocation_id from teams

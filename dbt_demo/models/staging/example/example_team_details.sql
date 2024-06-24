@@ -1,3 +1,11 @@
+{{
+	config(
+		tags=["example_tag"]
+	)
+}}
+
+
+
 with teams as (
 
     select * from {{ ref('example_teams')}}
